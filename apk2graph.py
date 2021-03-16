@@ -1,4 +1,7 @@
 # coding:utf-8
+'''
+info:通过使用androguard把目标为apkpath的APK转换为API调用图存储在路径为gmlpath的gml文件中
+'''
 import sys
 import os
 

@@ -1,4 +1,7 @@
 #coding=utf-8
+'''
+info：通过Families11.txt文件作为名单调用Markov.py把family文件夹下的文件转换为马尔可夫矩阵存放到Features/Families文件夹下
+'''
 import numpy
 import sys
 reload(sys)

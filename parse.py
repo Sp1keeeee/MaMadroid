@@ -1,3 +1,6 @@
+'''
+info:解析gml文件中各个节点中的label转换为A.B.C...的形式
+'''
 from collections import defaultdict
 
 def parse_label(line): #parse label to api
@@ -21,13 +24,6 @@ def parse_label(line): #parse label to api
     api = "<" + nclass + ": " +nfunction + ">"
 
     return api
-
-
-
-
-
-
-
 
 
 if __name__ == '__main__':

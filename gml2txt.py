@@ -1,4 +1,7 @@
 #coding=utf-8
+'''
+info：gml2graph函数通过读取gml文件得到调用图中的所有节点以及边信息，caller2callee通过调用parse.py中的方法将gml文件中的调用图信息转换为txt文件
+'''
 import sys
 import os
 import igraph
@@ -7,7 +10,7 @@ from collections import defaultdict
 
 
 
-gmlpath="./apk/百度翻译.gml"
+gmlpath="./apk/file1.gml"
 
 reload(sys)
 sys.setdefaultencoding('utf8')

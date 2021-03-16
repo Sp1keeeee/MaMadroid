@@ -1,10 +1,8 @@
 #coding=utf-8
 '''
-info: This is the first script to run after succesfully compiling the Appgraph.java file. 
-It uses soot to generate the callgraph and parses the graph and abstract the API calls for use by the MaMaStat.py script. 
-It accepts two arguments using the -f (or --file ) and -d (or --dir) options which specifies respectively, the APK file 
-(or directory with APK files) to analyze and the to your Android platform directory. Use the -h option to view the help message. 
-You can also edit the amount of memory allocated to the JVM heap space to fit your machine capabilities.
+info: 本项目第一个执行的脚本，通过此脚本把apkfile下的所有apk首先通过androguard转换为gml文件存放到gml文件夹下（调用图文件）【apk2graph.extractcg（）】，然后通过【gml2txt.gml2graph（）】读取图
+中的信息得到图中的节点和边，通过【gml2txt.caller2callee（）】转换为存储调用的对应.txt文件存储在txtfile文件夹下，最后一步通过【abstractGraph._preprocess_graph（）】将txt文件进行抽象，抽象出来
+的文件分别存储在class、family和package文件夹下 （缺点：没考虑到效率问题，这些操作是串行运行的，能否考虑并行？）
 '''
 
 import os
@@ -14,7 +12,7 @@ import gml2txt
 import time
 
 def main():
-	apkfile = os.getcwd() + "/apk/"
+	apkfile = os.getcwd() + "/apk/"  #apk dir
 	gmlfile = os.getcwd() + "/gml/"
 	txtfile = os.getcwd() + "/graphs/Trial1/"
 	num = 0 #num to count
