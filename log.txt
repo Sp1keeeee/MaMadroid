@@ -1,0 +1,3 @@
+filetest.apk is abstracted
+帮购.apk is abstracted
+2 apks have done
