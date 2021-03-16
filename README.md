@@ -32,3 +32,5 @@ A new version used Androguard but not Soot to realize MaMadroid
 **log.txt**:apk转换为gml成功的记录。
 
 其余文件夹初始都为空，在apk文件夹下加入apk后即可运行第一个脚本文件。
+
+本修改的项目还有很多不足，如有错误，可以联系作者邮箱。
