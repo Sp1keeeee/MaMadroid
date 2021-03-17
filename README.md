@@ -7,7 +7,7 @@ A new version used Androguard but not Soot to realize MaMadroid
 
 ## 环境
 
-Python2.7和Androidguard3.3.5。
+Python2.7和Androguard3.3.5。
 
 ## 代码文件说明
 
