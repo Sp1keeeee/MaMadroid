@@ -5,6 +5,10 @@ A new version used Androguard but not Soot to realize MaMadroid
 
 本项目在原项目的基础上进行了修改，使用androguard而非soot对APK进行静态分析获取API调用。
 
+## 环境
+
+Python2.7和Androidguard3.3.5。
+
 ## 代码文件说明
 
 - **mamadroid.py**：本项目第一个执行的脚本，通过此脚本把apk文件下的所有apk首先通过androguard转换为gml文件（调用图文件）存放到gml文件夹下【apk2graph.extractcg】，然后通过【gml2txt.gml2graph】读取图中的信息得到图中的节点和边，通过【gml2txt.caller2callee】转换为存储调用的对应.txt文件存储在txtfile文件夹下，最后一步通过【abstractGraph._preprocess_graph】将txt文件进行抽象，抽象出来的文件分别存储在class、family和package文件夹下。
@@ -33,4 +37,4 @@ A new version used Androguard but not Soot to realize MaMadroid
 
 其余文件夹初始都为空，在apk文件夹下加入apk后即可运行第一个脚本文件。
 
-本修改的项目还有很多不足，如有错误，可以联系作者邮箱。
+程序中还有很多不足，如有错误，可以联系我的邮箱。
